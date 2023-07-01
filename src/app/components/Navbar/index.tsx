@@ -1,6 +1,6 @@
 "use client";
 import {Disclosure} from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { Bars3Icon} from '@heroicons/react/24/outline'
 import {PageButton} from "@/app/components/PageButton/PageButton";
 import LocaleSwitcher from "@/app/components/LocaleSwitcher";
 import {useTranslations} from "next-intl";

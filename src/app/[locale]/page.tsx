@@ -11,6 +11,7 @@ import {PageButton} from "@/app/components/PageButton/PageButton";
 import {PageSectionTitle} from "@/app/components/PageSection/PageSectionTitle";
 import {PageSectionSubTitle} from "@/app/components/PageSection/PageSectionSubTitle";
 import {useTranslations} from 'next-intl';
+import ContactForm from "@/app/components/ContactForm";
 
 
 const navigation = [
@@ -85,7 +86,7 @@ export default function Home() {
 
             </header>
             <main className="container mx-auto p-4">
-                <section id="section_services" className="h-auto pt-[6.5rem]">
+                <section id="section_services" className="h-auto pt-0 md:pt-[6.5rem]">
                     <div className="flex flex-col md:flex-row md:gap-x-8 w-full h-full">
                         <div className="w-full md:w-1/2">
                             <PageSectionTitle title="Servicios" />
@@ -105,14 +106,14 @@ export default function Home() {
                                 otherClasses="text-2xl mt-6"
                             />
                         </div>
-                        <div className="w-full md:w-1/2 mt-24 md:mt-0">
+                        <div className="w-full md:w-1/2 mt-0 md:mt-0">
                             <EmblaCarousel items={services || []}/>
                         </div>
                     </div>
                 </section>
-                <section id="section_about" className="h-auto min-h-[40rem] pt-[6.5rem]">
+                <section id="section_about" className="  pt-0 md:pt-[6.5rem]">
                     <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
-                        <div className="w-full h-[600px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
+                        <div className="w-full md:h-[600px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
                             <Image src="/images/about.png" alt="AboutUs Image" width={600} height={600}/>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -134,14 +135,78 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section id="section_tools" className="h-screen pt-[6.5rem]">
-                    <PageSectionTitle title="Herramientas" />
+                <section id="section_tools" className="h-auto min-h-[40rem] pt-0 md:pt-[6.5rem]">
+                    <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
+                        <div className="w-full md:w-1/2">
+                            <PageSectionTitle title="Herramientas" otherClasses="text-start" />
+                            <PageSectionSubTitle subtitle={t("About.Subtitle")} otherClasses="text-start" />
+                            <p className="text-xl font-sans text-start mt-5">Usted debe tener un sólido conocimiento de
+                                HTML y CSS. Debe comprender la arquitectura de componentes de React. Debe tener buena
+                                atención al detalle, organización del código, habilidades de comunicación efectiva y
+                                capacidad para trabajar en equipo.</p>
+                            <div className="w-full mt-5 flex flex-col gap-3">
+                                {services?.map((item: IServiceCardProps) => (
+                                    <div key={item.id} className="flex items-center justify-end gap-3">
+                                        <p className="font-sans">{item.title}</p>
+                                        <GenericVignette borderColor="border-[#3D93FF]" bgColor="bg-white"
+                                                         dotColor="bg-[#3D93FF]"/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="w-full md:h-[600px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
+                            <Image src="/images/about.png" alt="AboutUs Image" width={600} height={600}/>
+                        </div>
+                    </div>
                 </section>
-                <section id="section_partners" className="h-screen pt-[6.5rem]">
-                    <PageSectionTitle title="Socios"  />
+                <section id="section_partners" className="h-auto min-h-[40rem] pt-[6.5rem]">
+                    <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
+                        <div className="w-full h-[600px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
+                            <Image src="/images/about.png" alt="AboutUs Image" width={600} height={600}/>
+                        </div>
+                        <div className="w-full md:w-1/2">
+                            <PageSectionTitle title="Socios" otherClasses="text-end" />
+                            <PageSectionSubTitle subtitle={t("About.Subtitle")} otherClasses="text-end" />
+                            <p className="text-xl font-sans text-end mt-5">Usted debe tener un sólido conocimiento de
+                                HTML y CSS. Debe comprender la arquitectura de componentes de React. Debe tener buena
+                                atención al detalle, organización del código, habilidades de comunicación efectiva y
+                                capacidad para trabajar en equipo.</p>
+                            <div className="w-full mt-5 flex flex-col gap-3">
+                                {services?.map((item: IServiceCardProps) => (
+                                    <div key={item.id} className="flex items-center justify-end gap-3">
+                                        <p className="font-sans">{item.title}</p>
+                                        <GenericVignette borderColor="border-[#3D93FF]" bgColor="bg-white"
+                                                         dotColor="bg-[#3D93FF]"/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section id="section_contact_us"  className="h-screen pt-[6.5rem]">
-                    <PageSectionTitle title="Contáctanos"  />
+                    <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
+                        <div className="w-full md:w-1/2">
+                            <PageSectionTitle title="Contactanos" otherClasses="text-start" />
+                            <PageSectionSubTitle subtitle={t("About.Subtitle")} otherClasses="text-start" />
+                            <p className="text-xl font-sans text-start mt-5">Usted debe tener un sólido conocimiento de
+                                HTML y CSS. Debe comprender la arquitectura de componentes de React. Debe tener buena
+                                atención al detalle, organización del código, habilidades de comunicación efectiva y
+                                capacidad para trabajar en equipo.</p>
+                            <div className="w-full mt-5 flex flex-col gap-3">
+                                {services?.map((item: IServiceCardProps) => (
+                                    <div key={item.id} className="flex items-center justify-start gap-3">
+                                        <p className="font-sans">{item.title}</p>
+                                        <GenericVignette borderColor="border-[#3D93FF]" bgColor="bg-white"
+                                                         dotColor="bg-[#3D93FF]"/>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className=" w-full h-[600px] sm:h-[600]  md:w-1/2 relative mt-0  md:mt-20">
+                            <ContactForm/>
+                        </div>
+                    </div>
+
                 </section>
             </main>
         </>
