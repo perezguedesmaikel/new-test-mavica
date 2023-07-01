@@ -15,7 +15,7 @@ export default function LocaleSwitcher() {
 
     const toLng = locale === "en" ? "es" : "en";
     function changeLang() {
-        if (isPending) return;
+        // if (isPending) return;
         startTransition(() => {
             router.replace(`/${toLng}${pathname}`);
         });

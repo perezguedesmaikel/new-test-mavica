@@ -25,14 +25,14 @@ export default function Navbar({navigation, current}: INavbarProps) {
     const locale = useLocale();
     console.log("LOCALE: ", locale)
     return (
-        <Disclosure as="nav" className={`transition ease-in-out duration-500 ${current === navigation[0].href ? "bg-white" : "bg-[#2E53A3]/30"} transition-colors rounded shadow w-[95%] m-auto left-[2%] fixed z-50 backdrop-blur-sm`}>
+        <Disclosure as="nav" className={`h-[86px]  transition ease-in-out duration-500 ${current === navigation[0].href ? "bg-white" : "bg-[#2E53A3]/30"} transition-colors rounded shadow w-[95%] left-[2%] fixed z-50 backdrop-blur-sm`}>
             {({ open }) => (
                 <>
                     <div className="mx-auto px-2 sm:px-6 lg:px-8">
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                                 {/* Mobile menu button*/}
-                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:text-[#2E53A3] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                                <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400  hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                                     <span className="sr-only">Open main menu</span>
                                     {open ? (
                                         <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
