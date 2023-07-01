@@ -5,7 +5,7 @@ interface IPageSectionTitle {
 
 export const PageSectionTitle = ({title, otherClasses}: IPageSectionTitle) => {
     return (
-        <h2 className={`text-2xl font-bold font-sans text-[#3A67CC] uppercase ${otherClasses}`}>
+        <h2 className={`text-2xl font-bold font-sans text-[#3A67CC] uppercase ${otherClasses} mt-20`}>
             {title}
         </h2>
     );

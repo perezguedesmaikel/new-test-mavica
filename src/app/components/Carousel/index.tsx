@@ -58,7 +58,7 @@ export const EmblaCarousel = ({items}: IEmblaCarouselProps) => {
 
 
     return (
-        <div className="embla ">
+        <div className="embla mt-20 ">
             <div className="embla__wrapper">
                 <div className="embla__viewport " ref={emblaRef}>
                     <div className="embla__container">

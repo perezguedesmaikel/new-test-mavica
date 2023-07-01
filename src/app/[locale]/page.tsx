@@ -112,7 +112,7 @@ export default function Home() {
                 </section>
                 <section id="section_about" className="h-auto min-h-[40rem] pt-[6.5rem]">
                     <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
-                        <div className="w-full h-[300px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-0">
+                        <div className="w-full h-[300px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
                             <Image src="/images/about.png" alt="AboutUs Image" fill objectFit={"contain"}/>
                         </div>
                         <div className="w-full md:w-1/2">
@@ -138,7 +138,10 @@ export default function Home() {
                     <PageSectionTitle title="Herramientas" />
                 </section>
                 <section id="section_partners" className="h-screen pt-[6.5rem]">
-                    <PageSectionTitle title="Socios" otherClasses="text-end" />
+                    <PageSectionTitle title="Socios"  />
+                </section>
+                <section id="section_contact_us"  className="h-screen pt-[6.5rem]">
+                    <PageSectionTitle title="Contáctanos"  />
                 </section>
             </main>
         </>

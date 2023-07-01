@@ -6,6 +6,7 @@ import LocaleSwitcher from "@/app/components/LocaleSwitcher";
 import {useTranslations} from "next-intl";
 import {useLocale} from "use-intl";
 import {useState} from "react";
+import Link from "next/link";
 
 export interface INavbarItem {
     name: string;
@@ -89,7 +90,9 @@ export default function Navbar({navigation, current}: INavbarProps) {
                                 </div>
                             </div>
                             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                                <Link href={'/#section_contact_us'}>
                                 <PageButton value={t("Contact")} otherClasses="me-3 md:me-6" />
+                                </Link>
                                 <LocaleSwitcher />
                             </div>
                         </div>
