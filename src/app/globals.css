@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*:root {*/
+/*  --foreground-rgb: 0, 0, 0;*/
+/*  --background-start-rgb: 214, 219, 220;*/
+/*  --background-end-rgb: 255, 255, 255;*/
+/*}*/
+
+/*@media (prefers-color-scheme: dark) {*/
+/*  :root {*/
+/*    --foreground-rgb: 255, 255, 255;*/
+/*    --background-start-rgb: 0, 0, 0;*/
+/*    --background-end-rgb: 0, 0, 0;*/
+/*  }*/
+/*}*/
+
+/*body {*/
+/*  color: rgb(var(--foreground-rgb));*/
+/*  background: linear-gradient(*/
+/*      to bottom,*/
+/*      transparent,*/
+/*      rgb(var(--background-end-rgb))*/
+/*    )*/
+/*    rgb(var(--background-start-rgb));*/
+/*}*/
+
+.embla {
+    overflow: hidden;
+    position: relative;
+}
+.embla__container {
+    display: flex;
+}
+.embla__wrapper {
+    padding: 0 3rem;
+}
+.embla__viewport {
+    width: 19rem;
+    min-width: 10rem;
+    margin: 0 auto;
+    height: 23rem;
+    overflow: hidden;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+    min-width: 10rem;
+    max-width: 17rem;
+    margin: 0 2rem;
+    /*min-height: 22rem;*/
+    /*max-height: 22rem;*/
+}
+
+.embla__prev,.embla__next  {
+    position: absolute;
+    top: calc(50% - 2rem);
+    z-index: 9999;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: #2E53A3;
+}
+
+.embla__prev {
+    left: 0;
+}
+.embla__next {
+    right: 0;
+}
+
+@media (min-width: 1280px) {
+    .embla__viewport {
+        width: 34rem;
+    }
+
+}
+
+@media (min-width: 1280px) and (max-width: 1536px) {
+    .embla__next {
+        right: -1rem;
+    }
+}

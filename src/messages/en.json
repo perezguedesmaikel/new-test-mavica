@@ -1,0 +1,20 @@
+{
+  "Main": {
+    "About": {
+      "Subtitle": "Translate only this wonderful title and the navbar"
+    }
+  },
+  "LocaleSwitcher": {
+    "label": "Change language",
+    "locale": "{locale, select, es {Español} en {English} other {Unknown}}"
+  },
+  "Navbar": {
+    "Home": "Home",
+    "Services": "Services",
+    "About": "About",
+    "Tools": "Tools",
+    "Partners": "Partners",
+    "Contact": "Contact",
+    "FlagImage": "Flag Image"
+  }
+}

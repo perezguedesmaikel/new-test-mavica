@@ -1,0 +1,25 @@
+.rounded_triangle,
+.rounded_triangle:before,
+.rounded_triangle:after {
+    position: relative;
+    display:block;
+    width:  100%;
+    height: 100%;
+    background: #001853;
+    border-top-right-radius: 20%;
+}
+.rounded_triangle {
+    margin: 60px auto 0 auto;
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.rounded_triangle:before,
+.rounded_triangle:after {
+    content: '';
+    position: absolute;
+}
+.rounded_triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.rounded_triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
