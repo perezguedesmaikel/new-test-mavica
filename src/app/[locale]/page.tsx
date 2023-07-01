@@ -159,7 +159,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <section id="section_partners" className="h-auto min-h-[40rem] pt-[6.5rem]">
+                <section id="section_partners" className="h-auto min-h-[40rem] md:pt-[6.5rem]">
                     <div className="flex flex-col-reverse md:flex-row md:gap-x-8 w-full h-full">
                         <div className="w-full h-[600px] sm:h-[600]  md:w-1/2 relative mt-20 md:mt-20">
                             <Image src="/images/about.png" alt="AboutUs Image" width={600} height={600}/>
