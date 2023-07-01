@@ -25,10 +25,10 @@ export default function Navbar({navigation, current}: INavbarProps) {
     const locale = useLocale();
     console.log("LOCALE: ", locale)
     return (
-        <Disclosure as="nav" className={`h-[86px]  transition ease-in-out duration-500 ${current === navigation[0].href ? "bg-white" : "bg-[#2E53A3]/30"} transition-colors rounded shadow w-[95%] left-[2%] fixed z-50 backdrop-blur-sm`}>
+        <Disclosure as="nav" className={`h-[86px] flex items-center  transition ease-in-out duration-500 ${current === navigation[0].href ? "bg-white" : "bg-[#2E53A3]/30"} transition-colors rounded shadow w-[95%] left-[2%] fixed z-50 backdrop-blur-sm`}>
             {({ open }) => (
                 <>
-                    <div className="mx-auto px-2 sm:px-6 lg:px-8">
+                    <div className=" px-2 sm:px-6 lg:px-8 w-full">
                         <div className="relative flex h-16 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                                 {/* Mobile menu button*/}
